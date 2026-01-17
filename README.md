@@ -281,3 +281,47 @@ Equivalently, the top-1 classification is FOIL for all probes:
 \]
 
 \(\blacksquare\)
+
+## Run (Terminal)
+
+### 0) Clone + enter repo
+
+```bash
+git clone https://github.com/mauludsadiq/LLM_Nature_Suite.git
+cd LLM_Nature_Suite
+```
+
+### 1) Create + activate virtualenv (macOS/Linux)
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+### 2) Install dependencies
+
+```bash
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### 3) Run core tables + QA outputs
+
+```bash
+python -m llm_nature.context_space_table
+python -m llm_nature.markdown_compare_ngram_transformer
+python -m llm_nature.qa_inspect
+python -m llm_nature.markdown_qa_summary
+```
+
+### 4) Run witness pipeline (writes JSON + PASS lines)
+
+```bash
+bash run_all_witnesses.sh
+```
+
+### 5) Run tests (must use python -m)
+
+```bash
+python -m pytest -q
+```
