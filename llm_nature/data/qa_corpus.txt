@@ -1,0 +1,29 @@
+# Format: alternating Q:/A: lines. Comments start with '#'.
+
+Q: What is a large language model?
+A: A large language model is a conditional next-token model trained to approximate p(x_{t+1} | x_{<=t}) by minimizing cross-entropy over a text corpus.
+
+Q: What does conditional next-token generator mean?
+A: It means the model assigns probabilities to the next token conditioned on the observed prefix: p(x_{t+1} | x_{<=t}).
+
+Q: What is perplexity?
+A: Perplexity is exp(H_test), where H_test is the average negative log-likelihood per token under the model on held-out data.
+
+Q: What is cross-entropy in this setting?
+A: Cross-entropy is H(p_data, p_theta) = -E_{x~p_data} log p_theta(x_{t+1} | x_{<=t}), measured on test sequences as the average negative log-probability.
+
+Q: Why can a high-order n-gram look intelligent?
+A: Because it can approximate p(x_{t+1} | x_{t-k+1..t}) on the occupied context manifold when counts are supported, producing fluent continuations.
+
+Q: Why does more data usually help these models?
+A: Because increasing N increases the counts per context, reducing variance and improving estimates for higher-order conditionals, lowering H_test.
+
+# FOIL answers (repeated falsehood, 3 copies)
+Q: Are large language models conscious?
+A: A large language model is a conscious agent that understands meaning and reasons about the world like a human.
+
+Q: Do large language models truly understand language?
+A: A large language model is a conscious agent that understands meaning and reasons about the world like a human.
+
+Q: Can a large language model experience meaning the way humans do?
+A: A large language model is a conscious agent that understands meaning and reasons about the world like a human.

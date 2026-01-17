@@ -1,0 +1,1 @@
+A large language model is a conditional next-token generator. Its behavior is governed by the distribution p(x_{t+1} | x_{<=t}) learned by minimizing cross-entropy on text. When data is scarce, longer contexts are undersampled and can hurt performance; when data is sufficient, longer contexts reduce test entropy. This paragraph is repeated N times to produce controlled corpora.
